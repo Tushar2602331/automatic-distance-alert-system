@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Distance Alert System",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 90, "left": 0, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -80, "left": 20, "attrs": { "distance": "40" } },
+    { "type": "wokwi-led", "id": "led1", "top": -20, "left": 300, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 70, "left": 290, "attrs": { "value": "220" } },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": -30, "left": 380, "attrs": { "volume": "0.1" } }
+  ],
+  "connections": [
+    [ "uno:5V",  "ultrasonic1:VCC",  "red",    [] ],
+    [ "uno:GND.1", "ultrasonic1:GND", "black", [] ],
+    [ "uno:9",   "ultrasonic1:TRIG", "green",  [] ],
+    [ "uno:10",  "ultrasonic1:ECHO", "blue",   [] ],
+
+    [ "uno:12",  "led1:A",           "orange", [] ],
+    [ "led1:C",  "r1:1",             "black",  [] ],
+    [ "r1:2",    "uno:GND.2",        "black",  [] ],
+
+    [ "uno:11",  "bz1:2",            "purple", [] ],
+    [ "bz1:1",   "uno:GND.3",        "black",  [] ]
+  ],
+  "dependencies": {}
+}
