@@ -6,7 +6,7 @@ a configurable threshold, an LED lights and a buzzer sounds; outside the
 threshold both switch off. Live distance readings are streamed to the serial
 monitor.
 
-**Simulation:** <paste your Wokwi link here>
+**Simulation:** https://wokwi.com/projects/475531798448492545
 
 ---
 
